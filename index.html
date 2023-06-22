@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>CAP2</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jquery UI -->
+    <link href="css/jquery-ui.theme.css" rel="stylesheet">
+    <!-- Main Styles -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	
+	<div class="modal fade confirmation-modal" id="confirmationModal" data-backdrop="static">
+	  <div class="modal-dialog modal-lg">
+	    <div class="modal-content">
+	      <div class="modal-body">
+	      	<div>
+	      		<h3>Are you sure you want to add as mobinil staff?</h3>
+	      		<div class="action-btns">
+		    		<button class="btn btn-lg btn-primary">Ok</button>
+		    		<button class="btn btn-lg btn-danger" data-dismiss="modal">Cancel</button>
+		    	</div>
+	      	</div>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+    <nav class="navbar navbar-default">
+    	<div class="container-fluid">
+    		<div class="row">
+    			<div class="col-xs-6 col-sm-8 col-md-4 col-lg-3">
+	    			<div class="navbar-header">
+						<a class="navbar-brand" href="#">
+							<img src="images/logo.png" alt="cap logo" class="img-responsive">
+						</a>
+					</div>
+	    		</div>
+	    		<div class="col-xs-6 col-sm-4 col-md-8 col-lg-9">
+	    			<div class="btn-group pull-right">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Welcome, <span>Asmaa Eissa</span><span class="caret">
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Profile</a></li>
+							<li><a href="#">Log Out</a></li>
+						</ul>
+					</div>
+	    			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="menu">
+						<ul class="nav navbar-nav">
+							<li class="active dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contractors <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li class="active"><a href="index.html">Mobinil staff</a></li>
+									<li><a href="#">Trusted users</a></li>
+									<li><a href="#">Unauthorized users</a></li>
+								</ul>
+							</li>
+							<li><a href="main-door.html">Main door alarm</a></li>
+							<li><a href="#">SOC</a></li>
+							<li><a href="#">Sites</a></li>
+							<li><a href="#">Search</a></li>
+							<li><a href="#">Settings</a></li>
+							<li><a href="#">Reports</a></li>
+						</ul>
+					</div>
+	    		</div>
+    		</div>
+    	</div>
+    </nav>
+
+    <section class="container-fluid">
+    	<h3>mobinil staff</h3>
+    	<div class="row form-section">
+    		<div class="col-sm-6">
+    			<div class="form-group">
+	    			<label for="fname">First name</label>
+	    			<input type="text" class="form-control" id="fname">
+	    		</div>
+    		</div>
+    		<div class="col-sm-6">
+    			<div class="form-group">
+	    			<label for="lname">Last name</label>
+	    			<input type="text" class="form-control" id="lname">
+	    		</div>
+    		</div>
+    		<div class="col-sm-6">
+    			<div class="form-group">
+	    			<label for="pnumber">Primary phone number</label>
+	    			<input type="text" class="form-control" id="pnumber">
+	    		</div>
+    		</div>
+    		<div class="col-sm-6">
+    			<div class="form-group">
+	    			<label for="coname">Company name</label>
+	    			<input type="text" class="form-control" id="coname">
+	    		</div>
+    		</div>
+    	</div>
+    	<div class="action-btns">
+    		<button class="btn btn-lg btn-primary">Search</button>
+    		<button class="btn btn-lg btn-danger">Reset</button>
+    	</div>
+    </section>
+
+    <section class="container-fluid">
+    	<div class="table-responsive">
+    		<table class="table">
+    			<thead>
+    				<tr>
+	    				<th>Company name</th>
+	    				<th>Full name</th>
+	    				<th>Email</th>
+	    				<th>Primary phone number</th>
+	    				<th>Creation data</th>
+	    				<th></th>
+    				</tr>
+    			</thead>
+    			<tbody>
+    				<tr>
+    					<td>Victory Link</td>
+    					<td>Asmaa Eissa</td>
+    					<td>Hr@victorylink.com</td>
+    					<td>01000111000</td>
+    					<td>11-11-2015</td>
+    					<td>
+    						<button class="btn btn-sm btn-info">Edit</button>
+    						<button class="btn btn-sm btn-danger">Delete</button>
+    					</td>
+    				</tr>
+    				<tr>
+    					<td>Mobinil</td>
+    					<td>Mohamed Mokhtar</td>
+    					<td>Hr@victorylink.com</td>
+    					<td>01000111000</td>
+    					<td>11-11-2015</td>
+    					<td>
+    						<button class="btn btn-sm btn-info">Edit</button>
+    						<button class="btn btn-sm btn-danger">Delete</button>
+    					</td>
+    				</tr>
+    				<tr>
+    					<td>VAS</td>
+    					<td>Hussam Samir</td>
+    					<td>Hr@victorylink.com</td>
+    					<td>01000111000</td>
+    					<td>11-11-2015</td>
+    					<td>
+    						<button class="btn btn-sm btn-info">Edit</button>
+    						<button class="btn btn-sm btn-danger">Delete</button>
+    					</td>
+    				</tr>
+    			</tbody>
+    		</table>
+    	</div>
+    	<div class="action-btns">
+    		<button class="btn btn-lg btn-primary" data-toggle="collapse" data-target="#addStaff" aria-expanded="false" aria-controls="addStaff">Add</button>
+    		<button class="btn btn-lg btn-info">Add Bulk</button>
+    	</div>
+    </section>
+
+    <section class="container-fluid collapse" id="addStaff">
+    	<h3>adding trusted user</h3>
+    	<div class="row form-section">
+    		<div class="col-sm-6">
+    			<div class="form-group">
+	    			<label for="addfname">First name</label>
+	    			<input type="text" class="form-control" id="addfname">
+	    		</div>
+    		</div>
+    		<div class="col-sm-6">
+    			<div class="form-group">
+	    			<label for="addmname">Middle name</label>
+	    			<input type="text" class="form-control" id="addmname">
+	    		</div>
+    		</div>
+    		<div class="col-sm-6">
+    			<div class="form-group">
+	    			<label for="addlname">Last name</label>
+	    			<input type="text" class="form-control" id="addlname">
+	    		</div>
+    		</div>
+    		<div class="col-sm-6">
+    			<div class="form-group">
+	    			<label for="addco">Company</label>
+	    			<input type="text" class="form-control" id="addco">
+	    		</div>
+    		</div>
+    		<div class="col-sm-6">
+    			<div class="form-group">
+	    			<label for="addteam">Team</label>
+	    			<input type="text" class="form-control" id="addteam">
+	    		</div>
+    		</div>
+    		<div class="col-sm-6">
+    			<div class="form-group">
+	    			<label for="addid">Employee id</label>
+	    			<input type="text" class="form-control" id="addid">
+	    		</div>
+    		</div>
+    		<div class="col-sm-6">
+    			<div class="form-group">
+	    			<label for="addnumber">Primary phone number</label>
+	    			<input type="text" class="form-control" id="addnumber">
+	    		</div>
+    		</div>
+    		<div class="col-sm-6">
+    			<div class="form-group">
+	    			<label for="addsnumber">Secondary phone number</label>
+	    			<input type="text" class="form-control" id="addsnumber">
+	    		</div>
+    		</div>
+    		<div class="col-sm-6">
+    			<div class="form-group">
+	    			<label for="addemail">Email</label>
+	    			<input type="text" class="form-control" id="addemail">
+	    		</div>
+    		</div>
+    		<div class="col-sm-6">
+    			<div class="form-group">
+	    			<label for="addDesc">Description</label>
+	    			<input type="text" class="form-control" id="addDesc">
+	    		</div>
+    		</div>
+    	</div>
+    	<div class="action-btns">
+    		<button class="btn btn-lg btn-primary" data-toggle="modal" data-target="#confirmationModal">Add</button>
+    		<button class="btn btn-lg btn-danger">Close</button>
+    	</div>
+    </section>
+
+    <footer>
+    	<p>All rights are reserved to <a href="http://victorylink.com/">Victorylink</a>.</p>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- jquery-ui.min -->
+    <script src="js/jquery-ui.min.js"></script>
+    <!-- Main js -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

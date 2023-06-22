@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>CAP2</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jquery UI -->
+    <link href="css/jquery-ui.structure.min.css" rel="stylesheet">
+    <!-- jquery UI theme -->
+    <link href="css/jquery-ui.theme.css" rel="stylesheet">
+    <!-- jquery UI time addon -->
+    <link href="css/jquery-ui-timepicker-addon.css" rel="stylesheet">
+    <!-- Main Styles -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+  <div class="modal fade modal-2nd" id="modal_2nd" data-backdrop="static"><!-- 2nd Modal must have class modal-2nd -->
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Send email</h4>
+          </div>
+          <div class="modal-body">
+            <section class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label for="mailto">To</label>
+                            <select class="form-control" id="mailto">
+                                <option>Mokhtar@mail.com</option>
+                                <option>Asmaa@mail.com</option>
+                                <option>Hussam@mail.com</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label for="mailother">Add Email</label>
+                            <input type="text" class="form-control" id="mailother">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label for="cc">CC</label>
+                            <input type="text" class="form-control" id="cc">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label for="Subject">Subject</label>
+                            <input type="text" class="form-control" id="Subject">
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="7"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </section>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="modal fade" id="legalModal" data-backdrop="static">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h3 class="modal-title">legal alert details</h3>
+          </div>
+          <div class="modal-body">
+            <section class="container-fluid">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Alarm criteria</th>
+                                <th>BSC-RNC</th>
+                                <th>Site name</th>
+                                <th>Requester id</th>
+                                <th>User note</th>
+                                <th>Alram start</th>
+                                <th>Alram end</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>SOCed</td>
+                                <td>Smouha 2</td>
+                                <td>03-MAHATET</td>
+                                <td></td>
+                                <td>Illegal Alert</td>
+                                <td>11-11-2015</td>
+                                <td>12-11-2015</td>
+                                <td>11-11-2015</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="container-fluid">
+                <h4>Specify the legal action</h4>
+                <p class="severity">Severity: minor</p>
+                <div class="row">
+                    <div class="col-xs-12">
+                       <div class="radio-inline">
+                            <input type="radio" name="false" id="false" value="option">
+                            <label for="false">
+                              False
+                            </label>
+                        </div> 
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="radio-inline">
+                            <input type="radio" name="false" id="ms" value="option">
+                            <label for="ms">
+                            Micro site
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="radio-inline">
+                            <input type="radio" name="false" id="ns" value="option">
+                            <label for="ns">
+                            New site
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="radio-inline">
+                            <input type="radio" name="false" id="si" value="option">
+                            <label for="si">
+                            Site inprogress
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="radio-inline">
+                            <input type="radio" name="false" id="ss" value="option">
+                            <label for="ss">
+                            Shared site
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="radio-inline">
+                            <input type="radio" name="false" id="police" value="option">
+                            <label for="police">
+                            Police
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="radio-inline">
+                            <input type="radio" name="false" id="secu" value="option">
+                            <label for="secu">
+                            Security audit
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="radio-inline">
+                            <input type="radio" name="false" id="agreement" value="option">
+                            <label for="agreement">
+                            Agreement with other operator
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option>3</option>
+                                <option>2</option>
+                                <option>1</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <label for="comment">Comment</label>
+                    </div>
+                    <div class="col-xs-6">
+                        <textarea class="form-control" id="comment" rows="7"></textarea>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" name="false" id="apply" value="option">
+                            <label for="apply">
+                            Always apply this action
+                            </label>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+            
+            <section class="container-fluid">
+                <h4>Intervention Details</h4>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="cm">Contractor Mobile</label>
+                            <input type="text" class="form-control" id="cm">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="cfn">Contractor First name</label>
+                            <input type="text" class="form-control" id="cfn">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="cmn">Contractor Middle name</label>
+                            <input type="text" class="form-control" id="cmn">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="cln">Contractor Last name</label>
+                            <input type="text" class="form-control" id="cln">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="at">Action type</label>
+                            <input type="text" class="form-control" id="at">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="ac">Action number</label>
+                            <input type="text" class="form-control" id="ac">
+                        </div>
+                    </div>
+                </div>
+                <div class="action-btns">
+                    <button class="btn btn-lg btn-primary" data-toggle="modal" data-target="#modal_2nd">Save</button>
+                    <button class="btn btn-lg btn-danger" data-dismiss="modal">Cancel</button>
+                </div>
+            </section>
+
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <nav class="navbar navbar-default">
+    	<div class="container-fluid">
+    		<div class="row">
+    			<div class="col-xs-6 col-sm-8 col-md-4 col-lg-3">
+	    			<div class="navbar-header">
+						<a class="navbar-brand" href="#">
+							<img src="images/logo.png" alt="cap logo" class="img-responsive">
+						</a>
+					</div>
+	    		</div>
+	    		<div class="col-xs-6 col-sm-4 col-md-8 col-lg-9">
+	    			<div class="btn-group pull-right">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Welcome, <span>Asmaa Eissa</span><span class="caret">
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Profile</a></li>
+							<li><a href="#">Log Out</a></li>
+						</ul>
+					</div>
+	    			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="menu">
+						<ul class="nav navbar-nav">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contractors <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="index.html">Mobinil staff</a></li>
+									<li><a href="#">Trusted users</a></li>
+									<li><a href="#">Unauthorized users</a></li>
+								</ul>
+							</li>
+							<li class="active"><a href="main-door.html">Main door alarm</a></li>
+							<li><a href="#">SOC</a></li>
+							<li><a href="#">Sites</a></li>
+							<li><a href="#">Search</a></li>
+							<li><a href="#">Settings</a></li>
+							<li><a href="#">Reports</a></li>
+						</ul>
+					</div>
+	    		</div>
+    		</div>
+    	</div>
+    </nav>
+
+    <section class="container-fluid">
+    	<h3>main door alarms</h3>
+    	<div class="row form-section">
+    		<div class="col-sm-4">
+    			<div class="form-group">
+	    			<label for="sitename">Site name</label>
+	    			<input type="text" class="form-control" id="sitename">
+	    		</div>
+    		</div>
+    		<div class="col-sm-4">
+    			<div class="form-group">
+	    			<label for="bscname">BSC name</label>
+	    			<input type="text" class="form-control" id="bscname">
+	    		</div>
+    		</div>
+    		<div class="col-sm-4">
+    			<div class="form-group">
+	    			<label for="alarmc">Alarm criteria</label>
+	    			<select class="form-control" id="alarmc">
+                        <option>2</option>
+                        <option>1</option>
+                        <option>3</option>            
+                        <option>4</option>
+                    </select>
+	    		</div>
+    		</div>
+    		<div class="col-sm-4">
+    			<div class="form-group">
+	    			<label for="datef">Date from</label>
+	    			<input type="text" class="form-control date-from" id="datef">
+	    		</div>
+    		</div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="datet">Date to</label>
+                    <input type="text" class="form-control date-to" id="datet">
+                </div>
+            </div>
+    	</div>
+    	<div class="action-btns">
+    		<button class="btn btn-lg btn-primary">Search</button>
+    		<button class="btn btn-lg btn-danger">Reset</button>
+    	</div>
+    </section>
+
+    <section class="container-fluid">
+    	<div class="table-responsive">
+    		<table class="table">
+    			<thead>
+    				<tr>
+	    				<th>Alarm criteria</th>
+	    				<th>BSC-RNC</th>
+	    				<th>Site name</th>
+	    				<th>Requester id</th>
+	    				<th>User note</th>
+	    				<th>Alram start</th>
+                        <th>Alram end</th>
+                        <th></th>
+    				</tr>
+    			</thead>
+    			<tbody>
+    				<tr>
+    					<td>SOCed</td>
+    					<td>Smouha 2</td>
+    					<td>03-MAHATET</td>
+    					<td></td>
+    					<td>Illegal Alert</td>
+    					<td>11-11-2015</td>
+                        <td>12-11-2015</td>
+                        <td>
+                            <button class="btn btn-sm btn-info">Edit</button>
+                            <button class="btn btn-sm btn-info">History</button>
+                            <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#legalModal">Legal</button>
+                        </td>
+    				</tr>
+    				<tr class="bg-pending">
+                        <td>Pending</td>
+                        <td>Smouha 2</td>
+                        <td>03-MAHATET</td>
+                        <td></td>
+                        <td>Illegal Alert</td>
+                        <td>11-11-2015</td>
+                        <td>12-11-2015</td>
+                        <td>
+                            <button class="btn btn-sm btn-info">Edit</button>
+                            <button class="btn btn-sm btn-info">History</button>
+                        </td>
+                    </tr>
+    				<tr class="bg-renewal">
+                        <td>Renewal</td>
+                        <td>Smouha 2</td>
+                        <td>03-MAHATET</td>
+                        <td></td>
+                        <td>Illegal Alert</td>
+                        <td>11-11-2015</td>
+                        <td>12-11-2015</td>
+                        <td>
+                            <button class="btn btn-sm btn-info">Edit</button>
+                            <button class="btn btn-sm btn-info">History</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SOCed</td>
+                        <td>Smouha 2</td>
+                        <td>03-MAHATET</td>
+                        <td></td>
+                        <td>Illegal Alert</td>
+                        <td>11-11-2015</td>
+                        <td>12-11-2015</td>
+                        <td>
+                            <button class="btn btn-sm btn-info">Edit</button>
+                            <button class="btn btn-sm btn-info">History</button>
+                        </td>
+                    </tr>
+                    <tr class="bg-access">
+                        <td>Access</td>
+                        <td>Smouha 2</td>
+                        <td>03-MAHATET</td>
+                        <td></td>
+                        <td>Illegal Alert</td>
+                        <td>11-11-2015</td>
+                        <td>12-11-2015</td>
+                        <td>
+                            <button class="btn btn-sm btn-info">Edit</button>
+                            <button class="btn btn-sm btn-info">History</button>
+                        </td>
+                    </tr>
+                    <tr class="bg-departure">
+                        <td>Departure</td>
+                        <td>Smouha 2</td>
+                        <td>03-MAHATET</td>
+                        <td></td>
+                        <td>Illegal Alert</td>
+                        <td>11-11-2015</td>
+                        <td>12-11-2015</td>
+                        <td>
+                            <button class="btn btn-sm btn-primary">Approve</button>
+                            <button class="btn btn-sm btn-danger">Reject</button>
+                            <button class="btn btn-sm btn-info">Edit</button>
+                            <button class="btn btn-sm btn-info">History</button>
+                        </td>
+                    </tr>
+    			</tbody>
+    		</table>
+    	</div>
+    </section>
+
+    <footer>
+    	<p>All rights are reserved to <a href="http://victorylink.com/">Victorylink</a>.</p>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- jquery-ui -->
+    <script src="js/jquery-ui.min.js"></script>
+    <!-- jquery-ui timer addon -->
+    <script src="js/jquery-ui-timepicker-addon.min.js"></script>
+    <!-- Main js -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
